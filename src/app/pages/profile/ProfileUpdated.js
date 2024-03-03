@@ -49,7 +49,7 @@ function ProfileUpdated() {
     const email = localStorage.getItem("email");
 
     try {
-      const response = await fetch(`http://localhost:8080/profile/${email}`);
+      const response = await fetch(`https://mern-backend-kxg8.onrender.com/profile/${email}`);
       if (response.ok) {
         const data = await response.json();
         setProfileDetails(data);
